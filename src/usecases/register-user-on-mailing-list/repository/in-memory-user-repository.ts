@@ -9,10 +9,22 @@ export class InMemoryUserRepository implements UserRepository {
   }
 
   async add (user: UserData): Promise<void> {
-    throw new Error('method not implement')
+    const exists = await this.exist(user)
+
+    if (!exists) {
+      this.repository.push(user)
+    }
   }
 
   async findUserByEmail (email: string): Promise<UserData> {
+    const users = this.repository.filter((user) => {
+      return user.email === email
+    })
+
+    if (users.length > 0) {
+      return users[0]
+    }
+
     return null
   }
 
@@ -21,6 +33,9 @@ export class InMemoryUserRepository implements UserRepository {
   }
 
   async exist (user: UserData): Promise<boolean> {
-    throw new Error('method not implement')
+    if (await this.findUserByEmail(user.email) === null) {
+      return false
+    }
+    return true
   }
 }
