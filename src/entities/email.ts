@@ -1,4 +1,21 @@
+import { Either, left, right } from '../shared/either'
+import { InvalidEmailError } from './invalid-email-error'
+
 export class Email {
+  private readonly email: string
+
+  private constructor (email: string) {
+    this.email = email
+  }
+
+  static create (email:string): Either<InvalidEmailError, Email> {
+    if (this.validation(email)) {
+      return right(new Email(email))
+    }
+
+    return left(new InvalidEmailError())
+  }
+
   static validation (email:string): boolean {
     if (!email) {
       return false
