@@ -1,7 +1,7 @@
 import { Either, left } from '../shared/either'
 import { Email } from './email'
 import { InvalidEmailError } from './errors/invalid-email-error'
-import { InvalidNameError } from './errors/invalid-name-erro'
+import { InvalidNameError } from './errors/invalid-name-error'
 import { Name } from './name'
 import { UserData } from './use-data'
 
