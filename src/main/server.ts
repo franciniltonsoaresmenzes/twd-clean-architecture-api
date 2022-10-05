@@ -1,6 +1,11 @@
+import { MongoHelper } from '@/external/mongodb/helper'
 import 'module-alias/register'
-import app from './config/app'
 
-app.listen(5000, () => {
-  console.log('Server running at http:www.localhost.com:5000/')
-})
+MongoHelper.connect(process.env.MONGO_URL)
+  .then(async () => {
+    const app = (await import('./config/app')).default
+    app.listen(5000, () => {
+      console.log('Server running at http:www.localhost.com:5000/')
+    })
+  })
+  .catch(console.error)
