@@ -19,7 +19,8 @@ export class MongodbUserRepository implements UserRepository {
   }
 
   async findAllUser (): Promise<UserData[]> {
-    throw new Error('not implements')
+    const userCollection = await MongoHelper.getCollection('users')
+    return await userCollection.find<UserData>({}).toArray()
   }
 
   async exist (user: UserData): Promise<boolean> {
