@@ -1,5 +1,5 @@
-import { MongoHelper } from '@/external/mongodb/helper'
-import { MongodbUserRepository } from '@/external/mongodb'
+import { MongodbUserRepository } from '@/external/repositories/mongodb'
+import { MongoHelper } from '@/external/repositories/mongodb/helper'
 
 describe('Mongodb User repository', () => {
   beforeAll(async () => {
