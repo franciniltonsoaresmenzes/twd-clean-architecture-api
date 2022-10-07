@@ -1,7 +1,7 @@
-import { MongoHelper } from '@/external/mongodb/helper'
 import 'module-alias/register'
+import { MongoHelper } from '@/external/repositories/mongodb/helper'
 
-MongoHelper.connect(process.env.MONGO_URL)
+MongoHelper.connect('mongodb://localhost:27017')
   .then(async () => {
     const app = (await import('./config/app')).default
     app.listen(5000, () => {
