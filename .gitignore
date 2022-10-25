@@ -3,3 +3,5 @@ dist
 coverage
 .vscode
 .fleet
+.env
+globalConfig.json
