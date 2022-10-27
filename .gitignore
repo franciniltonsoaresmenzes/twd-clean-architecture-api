@@ -4,4 +4,3 @@ coverage
 .vscode
 .fleet
 .env
-globalConfig.json
