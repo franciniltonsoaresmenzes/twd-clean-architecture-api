@@ -1,8 +1,7 @@
 ## theWiseDev |API que registra usuários em banco e notifica por email
 
 
-
-![](/home/francinilton/Documents/www/curso/twd-clean-architecture-api/preview/preview-test.gif)
+<img src='preview/preview-test.gif'/>
 
 
 
