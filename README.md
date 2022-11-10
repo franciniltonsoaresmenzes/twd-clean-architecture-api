@@ -1,7 +1,8 @@
 ## theWiseDev |API que registra usuários em banco e notifica por email
 
 
-<img src='preview/preview-test.gif'/>
+<img src='preview/preview-test.gif' />
+<img src='preview/clean-architecture.png' width='400px'/>
 
 
 
