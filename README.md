@@ -5,7 +5,7 @@
 
 # 📜 Sobre
 
-Foi desenvolvido utilizando métodos como Clean Architecture com Node.js utilizando Typescript.
+Em uma API muito simples foi extraído muitos conceitos como SOLID, TDD (Desenvolvimento guiado por testes) e tratamento de erros como either. 
 
 # 🧑‍💻 Tecnologias utilizadas
 
